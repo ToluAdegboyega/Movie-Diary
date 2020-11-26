@@ -7,11 +7,11 @@ const MovieForm = (props) => {
         review: ''
     }
 
-    var [values, setValues] = useState(initialFieldValues)
+    var [values, setValues] = useState(initialFieldValues);
 
 
     useEffect(() => {
-        if (props.currentId == '')
+        if (props.currentId === '')
             setValues({ ...initialFieldValues })
         else
             setValues({
@@ -53,7 +53,7 @@ const MovieForm = (props) => {
                 />
             </div>
             <div className="form-group">
-                <input type="submit" value={props.currentId == "" ? "Add  Movie" : "Update"} className="btn btn-primary btn-block" />
+                <input type="submit" value={props.currentId === "" ? "Add  Movie" : "Update"} className="btn btn-primary btn-block" />
             </div>
         </form>
     );
