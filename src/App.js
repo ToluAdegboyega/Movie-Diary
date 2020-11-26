@@ -1,9 +1,10 @@
 import './assets/App.css';
+import  Movies  from  './components/Movies';
 
 function App() {
   return (
-    <div>
-      In progress
+    <div className='movieWrapper' >
+      <Movies/>
     </div>
   );
 }
