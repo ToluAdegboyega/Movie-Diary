@@ -1,9 +1,28 @@
 import React, { useState, Fragment,	useEffect } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 import AddUserForm from './AddUserForm';
 import EditUserForm from './EditUserForm';
 import UserTable from './UserTable';
+import  Button from '@material-ui/core/Button';
+import firebaseConfig from '../firebase';
+
+const useStyles = makeStyles((theme) => ({
+    button: {
+        color: 'white',
+        textAlign: 'center',
+        fontFamily: 'Segoe UI',
+        marginBottom: '50px',
+        background: 'linear-gradient( 90deg, rgba(255, 118, 20, 1) 0%,  rgba(255, 84, 17, 1) 100% )',
+        padding: '16px',
+        borderRadius: '5px',
+        marginLeft: '20px'
+    }
+}));
+
 
 const Movies = () => {
+	const classes = useStyles();
+
 	// Data
 	const usersData = [
 		{ id: 1, name: 'Rush Hour', date: '1998',	review:	'A vindication of what some of us have always known: that Jackie is a screen legend.' },
@@ -57,6 +76,8 @@ const Movies = () => {
 
 	return (
 		<div className="container">
+			 <Button onClick={() => firebaseConfig.auth().signOut()} className={classes.button}>Logout</Button>
+
 			<div className="jumbotron jumbotron-fluid">
 				<div className="container">
 				<h1 className="display-4 text-center">Movie Database</h1>
