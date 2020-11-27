@@ -1,103 +1,90 @@
-import React, { useState, useEffect } from 'react';
-import MovieForm from "./MovieForm";
-import firebaseDb from "../firebase";
-import  '../assets/Movies.css';
+import React, { useState, Fragment,	useEffect } from 'react';
+import AddUserForm from './AddUserForm';
+import EditUserForm from './EditUserForm';
+import UserTable from './UserTable';
 
 const Movies = () => {
+	// Data
+	const usersData = [
+		{ id: 1, name: 'Rush Hour', date: '1998',	review:	'A vindication of what some of us have always known: that Jackie is a screen legend.' },
+		{ id: 2, name: 'La La Land', date: '2016',	review:	'It is joyful. It leaps off the screen.' },
+		{ id: 3, name: 'Selma', date: '2014',	review:	`Selma is worthy of my highest recommendation. Hopefully like me, you'll clap once the end credits roll.` },
+	]
 
-	var [currentId, setCurrentId] = useState('');
-    var [movieObjects, setMovieObjects] = useState({})
+	const initialFormState = { id: null, name: '', date: '',	review:	'' }
 
-    //Once components load complete
-    useEffect(() => {
-        firebaseDb.child('movies').on('value', snapshot => {
-            if (snapshot.val() != null) {
-                setMovieObjects({
-                    ...snapshot.val()
-                });
-            }
-        })
-    }, [])
+	// Setting state
+	const [ users, setUsers ] = useState(usersData)
+	const [ currentUser, setCurrentUser ] = useState(initialFormState)
+	const [ editing, setEditing ] = useState(false)
 
-    const addOrEdit = (obj) => {
-        if (currentId === '')
-            firebaseDb.child('movies').push(
-                obj,
-                err => {
-                    if (err)
-                        console.log(err)
-                    else
-                        setCurrentId('')
-             })
-        else
-            firebaseDb.child(`movies/${currentId}`).set(
-                obj,
-                err => {
-                    if (err)
-                        console.log(err)
-                    else
-                        setCurrentId('')
-            })
-    }
+	// CRUD operations
+	const addUser = user => {
+		user.id = users.length + 1
+		setUsers([ ...users, user ])
+	}
+
+	const deleteUser = id => {
+		setEditing(false)
+
+		setUsers(users.filter(user => user.id !== id))
+	}
+
+	const updateUser = (id, updatedUser) => {
+		setEditing(false)
+
+		setUsers(users.map(user => (user.id === id ? updatedUser : user)))
+	}
+
+	const editRow = user => {
+		setEditing(true)
+
+		setCurrentUser({ id: user.id, name: user.name, date: user.date,	review:	user.review })
+	}
+
+	//save session
+	
+	useEffect(() => {
+        const users = JSON.parse(localStorage.getItem('users'));
+        if (users) {
+			setUsers(users);
+		}
+    }, []);
     
-    const onDelete = id => {
-        if (window.confirm('Are you sure to delete this record?')) {
-            firebaseDb.child(`movies/${id}`).remove(
-                err => {
-                if (err)
-                    console.log(err)
-                else
-                    setCurrentId('')
-            })
-        }
-    }
+    useEffect(() => {
+        localStorage.setItem('users', JSON.stringify(users));
+    }, [users]);
 
-
-  return (
-        <>
-            <div className="jumbotron jumbotron-fluid">
-                <div className="container">
-                    <h1 className="display-4 text-center">Movie Database</h1>
-                </div>
-            </div>
-            <div className="row">
-                <div className="col-md-5">
-                    <MovieForm {...({ currentId, movieObjects, addOrEdit})} ></MovieForm>
-                </div>
-                <div className="col-md-7">
-                    <table className="table table-borderless table-stripped">
-                        <thead className="thead-light">
-                            <tr>
-                                <th>Name</th>
-                                <th>Year Released</th>
-                                <th>Review</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {
-                                Object.keys(movieObjects).map((key) => (
-                                    <tr key={key} className="table-row" >
-                                        <td>{movieObjects[key].fullName}</td>
-                                        <td>{movieObjects[key].date}</td>
-                                        <td>{movieObjects[key].review}</td>
-                                        <td >
-                                            <a className="btn text-primary" onClick={() => { setCurrentId(key) }}>
-                                                <i className="fas fa-pencil-alt"></i>
-                                            </a>
-                                            <a className="btn text-danger" onClick={() => { onDelete(key) }}>
-                                                <i className="far fa-trash-alt"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                ))
-                            }
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </>
-    );
+	return (
+		<div className="container">
+			<div className="jumbotron jumbotron-fluid">
+				<div className="container">
+				<h1 className="display-4 text-center">Movie Database</h1>
+				</div>
+    		</div>
+			<div className="row">
+				<div className="flex-large	col-md-5">
+					{editing ? (
+						<Fragment>
+							<EditUserForm
+								editing={editing}
+								setEditing={setEditing}
+								currentUser={currentUser}
+								updateUser={updateUser}
+							/>
+						</Fragment>
+					) : (
+						<Fragment>
+							<AddUserForm addUser={addUser} />
+						</Fragment>
+					)}
+				</div>
+				<div className="col-md-7">
+					<UserTable users={users} editRow={editRow} deleteUser={deleteUser} />
+				</div>
+			</div>
+		</div>
+	)
 }
 
 export default Movies;
