@@ -14,7 +14,7 @@ const AddUserForm = props => {
 		<form
 			onSubmit={event => {
 				event.preventDefault()
-				if (!user.name || !user.date  || user.review  ) return
+				if (!user.name || !user.date ) return
 
 				props.addUser(user)
 				setUser(initialFormState)
