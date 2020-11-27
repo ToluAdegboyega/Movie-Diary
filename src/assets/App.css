@@ -27,4 +27,5 @@ a {
 
 .movieWrapper {
   margin: 50px;
+  display: flex;
 }
