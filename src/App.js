@@ -1,12 +1,16 @@
-import './assets/App.css';
-import  Movies  from  './components/Movies';
+import React from 'react';
+import Movies from './components/Movies';
+import  './assets/App.css';
 
 function App() {
   return (
     <div className='movieWrapper' >
-      <Movies/>
+      <Movies></Movies>
     </div>
   );
 }
 
-export default App;
+export  default App;
+
+
+
