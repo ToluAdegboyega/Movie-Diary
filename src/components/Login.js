@@ -49,7 +49,7 @@ export default function Login({ history }) {
         await firebaseConfig
           .auth()
           .signInWithEmailAndPassword(email.value, password.value);
-        history.push("/Movie-Crud");
+        history.push("/Movie-Database");
       } catch (error) {
         alert(error);
       }
@@ -58,7 +58,7 @@ export default function Login({ history }) {
   );
   const { currentUser } = useContext(AuthContext);
   if (currentUser) {
-    return <Redirect to="/Movie-Crud" />;
+    return <Redirect to="/Movie-Database" />;
   }
 
   return (
