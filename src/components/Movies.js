@@ -81,7 +81,7 @@ const Movies = () => {
 
 			<div className="page-header">
 				<div className="container">
-				<h1 className="display-4 text-center">Movie Diary</h1>
+				<h1 className="display-8 text-center">Movie Diary<i class="fas fa-mug-hot"></i></h1>
 				</div>
     		</div>
 			<div className="row">
