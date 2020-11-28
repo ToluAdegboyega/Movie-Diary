@@ -44,7 +44,7 @@ export default function SignUp({  history  }) {
       await firebaseConfig
         .auth()
         .createUserWithEmailAndPassword(email.value, password.value);
-      history.push("/Movie-Database");
+      history.push("/Movie-Diary");
     } catch (error) {
       alert(error);
     }

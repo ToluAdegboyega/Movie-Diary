@@ -12,7 +12,7 @@ function App() {
     <AuthProvider>
       <Router>
        <div className='movieWrapper' >
-          <PrivateRoute exact path="/Movie-Database" component={Movies} />
+          <PrivateRoute exact path="/Movie-Diary" component={Movies} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={SignUp} />
       </div>
