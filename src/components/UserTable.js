@@ -6,7 +6,7 @@ const UserTable = props => (
     <thead  className="thead-light">
       <tr>
         <th>Movie Title</th>
-        <th>Year Released</th>
+        <th>Date Watched</th>
         <th> Review</th>
         <th></th>
       </tr>

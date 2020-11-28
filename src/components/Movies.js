@@ -5,6 +5,7 @@ import EditUserForm from './EditUserForm';
 import UserTable from './UserTable';
 import  Button from '@material-ui/core/Button';
 import firebaseConfig from '../firebase';
+import	'../assets/Movies.css'
 
 const useStyles = makeStyles((theme) => ({
     button: {
@@ -25,9 +26,9 @@ const Movies = () => {
 
 	// Data
 	const usersData = [
-		{ id: 1, name: 'Rush Hour', date: '1998',	review:	'A vindication of what some of us have always known: that Jackie is a screen legend.' },
-		{ id: 2, name: 'La La Land', date: '2016',	review:	'It is joyful. It leaps off the screen.' },
-		{ id: 3, name: 'Selma', date: '2014',	review:	`Selma is worthy of my highest recommendation. Hopefully like me, you'll clap once the end credits roll.` },
+		{ id: 1, name: 'Rush Hour', date: '1998-03-19',	review:	'A vindication of what some of us have always known: that Jackie is a screen legend.' },
+		{ id: 2, name: 'La La Land', date: '2016-09-23',	review:	'It is joyful. It leaps off the screen.' },
+		{ id: 3, name: 'Selma', date: '2014-11-05',	review:	`Selma is worthy of my highest recommendation. Hopefully like me, you'll clap once the end credits roll.` },
 	]
 
 	const initialFormState = { id: null, name: '', date: '',	review:	'' }
@@ -78,9 +79,9 @@ const Movies = () => {
 		<div className="container">
 			 <Button onClick={() => firebaseConfig.auth().signOut()} className={classes.button}>Logout</Button>
 
-			<div className="jumbotron jumbotron-fluid">
+			<div className="page-header">
 				<div className="container">
-				<h1 className="display-4 text-center">Movie Database</h1>
+				<h1 className="display-4 text-center">Movie Diary</h1>
 				</div>
     		</div>
 			<div className="row">

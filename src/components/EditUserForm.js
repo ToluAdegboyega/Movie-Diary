@@ -32,9 +32,10 @@ const EditUserForm = props => {
                 />
             </div>
             <div className="form-group input-group">
-                <input className="form-control" name="date" placeholder="Year  Released"
+                <input className="form-control" name="date" placeholder="Date Watched"
                     value={user.date}
                     onChange={handleInputChange}
+                    type= "date"
                 />
         </div>
         <div className="form-group input-group">
