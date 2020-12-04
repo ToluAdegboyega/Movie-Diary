@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import AddUserForm from './AddUserForm';
 import EditUserForm from './EditUserForm';
 import UserTable from './UserTable';
-import  Button from '@material-ui/core/Button';
+import Button from '@material-ui/core/Button';
 import firebaseConfig from '../firebase';
 import	'../assets/Movies.css'
 
