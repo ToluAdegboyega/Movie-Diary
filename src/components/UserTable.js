@@ -45,4 +45,4 @@ const UserTable = props => (
   </table>
 )
 
-export default UserTable
+export default UserTable;
