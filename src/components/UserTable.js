@@ -2,23 +2,14 @@ import React from 'react';
 import  '../assets/UserTable.css';
 
 const UserTable = props => (
-  <table    className="table table-borderless table-stripped">
-    <thead  className="thead-light">
-      <tr>
-        <th>Movie Title</th>
-        <th>Date Watched</th>
-        <th> Review</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
+  <div className="card-wrap">
       {props.users.length > 0 ? (
         props.users.map(user => (
-          <tr key={user.id} className="table-row">
-            <td>{user.name}</td>
-            <td>{user.date}</td>
-            <td>{user.review}</td>
-            <td>
+          <div key={user.id}  className="movie-card">
+            <p className="card-name" >{user.name}</p>
+            <p className="card-date" >Date Watched: {user.date}</p>
+            <p className="card-review" >{user.review}</p>
+            <div className="edit-delete" >
               <a
                 onClick={() => {
                   props.editRow(user)
@@ -33,16 +24,13 @@ const UserTable = props => (
               >
                <i className="far fa-trash-alt"></i>
               </a>
-            </td>
-          </tr>
+            </div>
+          </div>
         ))
       ) : (
-        <tr className="table-row">
-          <td colSpan={3}>No movies</td>
-        </tr>
+        <div  className="no-movie-card">No movies</div>
       )}
-    </tbody>
-  </table>
+  </div>
 )
 
 export default UserTable;
