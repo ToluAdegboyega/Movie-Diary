@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/Movie-Diary/static/css/main.2caec827.chunk.css",
-    "main.js": "/Movie-Diary/static/js/main.c57b001c.chunk.js",
-    "main.js.map": "/Movie-Diary/static/js/main.c57b001c.chunk.js.map",
+    "main.css": "/Movie-Diary/static/css/main.bcfe3105.chunk.css",
+    "main.js": "/Movie-Diary/static/js/main.0f0421df.chunk.js",
+    "main.js.map": "/Movie-Diary/static/js/main.0f0421df.chunk.js.map",
     "runtime-main.js": "/Movie-Diary/static/js/runtime-main.1c91d384.js",
     "runtime-main.js.map": "/Movie-Diary/static/js/runtime-main.1c91d384.js.map",
     "static/js/2.a096f199.chunk.js": "/Movie-Diary/static/js/2.a096f199.chunk.js",
     "static/js/2.a096f199.chunk.js.map": "/Movie-Diary/static/js/2.a096f199.chunk.js.map",
     "index.html": "/Movie-Diary/index.html",
-    "static/css/main.2caec827.chunk.css.map": "/Movie-Diary/static/css/main.2caec827.chunk.css.map",
+    "static/css/main.bcfe3105.chunk.css.map": "/Movie-Diary/static/css/main.bcfe3105.chunk.css.map",
     "static/js/2.a096f199.chunk.js.LICENSE.txt": "/Movie-Diary/static/js/2.a096f199.chunk.js.LICENSE.txt",
     "static/media/App.css": "/Movie-Diary/static/media/film-1668918_640.cbda7063.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.1c91d384.js",
     "static/js/2.a096f199.chunk.js",
-    "static/css/main.2caec827.chunk.css",
-    "static/js/main.c57b001c.chunk.js"
+    "static/css/main.bcfe3105.chunk.css",
+    "static/js/main.0f0421df.chunk.js"
   ]
 }
