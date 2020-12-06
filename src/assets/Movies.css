@@ -8,3 +8,21 @@
 .fa-mug-hot {
     margin-left: 15px;
 }
+
+.movie-wrap {
+    display: flex;
+}
+
+@media only screen and (max-width: 650px)  {
+    .movie-wrap {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.edit-table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
