@@ -77,15 +77,15 @@ const Movies = () => {
 
 	return (
 		<div className="container">
-			 <Button onClick={() => firebaseConfig.auth().signOut()} className={classes.button}>Logout</Button>
+			<Button onClick={() => firebaseConfig.auth().signOut()} className={classes.button}>Logout</Button>
 
-			<div className="page-header">
+			{/*<div className="page-header">
 				<div className="container">
 				<h1 className="display-8 text-center">Movie Diary<i class="fas fa-mug-hot"></i></h1>
 				</div>
-    		</div>
-			<div className="row">
-				<div className="flex-large	col-md-5">
+			</div>*/}
+			<div	className="movie-wrap"	>
+				<div className="edit-table">
 					{editing ? (
 						<Fragment>
 							<EditUserForm
@@ -101,7 +101,7 @@ const Movies = () => {
 						</Fragment>
 					)}
 				</div>
-				<div className="col-md-7">
+				<div>
 					<UserTable users={users} editRow={editRow} deleteUser={deleteUser} />
 				</div>
 			</div>
