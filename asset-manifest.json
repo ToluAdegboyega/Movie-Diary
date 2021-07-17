@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/Movie-Diary/static/css/main.bcfe3105.chunk.css",
-    "main.js": "/Movie-Diary/static/js/main.0f0421df.chunk.js",
-    "main.js.map": "/Movie-Diary/static/js/main.0f0421df.chunk.js.map",
+    "main.css": "/Movie-Diary/static/css/main.fb7c86d7.chunk.css",
+    "main.js": "/Movie-Diary/static/js/main.b9053657.chunk.js",
+    "main.js.map": "/Movie-Diary/static/js/main.b9053657.chunk.js.map",
     "runtime-main.js": "/Movie-Diary/static/js/runtime-main.1c91d384.js",
     "runtime-main.js.map": "/Movie-Diary/static/js/runtime-main.1c91d384.js.map",
-    "static/js/2.a096f199.chunk.js": "/Movie-Diary/static/js/2.a096f199.chunk.js",
-    "static/js/2.a096f199.chunk.js.map": "/Movie-Diary/static/js/2.a096f199.chunk.js.map",
+    "static/js/2.9ecadb38.chunk.js": "/Movie-Diary/static/js/2.9ecadb38.chunk.js",
+    "static/js/2.9ecadb38.chunk.js.map": "/Movie-Diary/static/js/2.9ecadb38.chunk.js.map",
     "index.html": "/Movie-Diary/index.html",
-    "static/css/main.bcfe3105.chunk.css.map": "/Movie-Diary/static/css/main.bcfe3105.chunk.css.map",
-    "static/js/2.a096f199.chunk.js.LICENSE.txt": "/Movie-Diary/static/js/2.a096f199.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/Movie-Diary/static/media/film-1668918_640.cbda7063.jpg"
+    "static/css/main.fb7c86d7.chunk.css.map": "/Movie-Diary/static/css/main.fb7c86d7.chunk.css.map",
+    "static/js/2.9ecadb38.chunk.js.LICENSE.txt": "/Movie-Diary/static/js/2.9ecadb38.chunk.js.LICENSE.txt",
+    "static/media/imageedit_1_2628399089.93cc9175.png": "/Movie-Diary/static/media/imageedit_1_2628399089.93cc9175.png"
   },
   "entrypoints": [
     "static/js/runtime-main.1c91d384.js",
-    "static/js/2.a096f199.chunk.js",
-    "static/css/main.bcfe3105.chunk.css",
-    "static/js/main.0f0421df.chunk.js"
+    "static/js/2.9ecadb38.chunk.js",
+    "static/css/main.fb7c86d7.chunk.css",
+    "static/js/main.b9053657.chunk.js"
   ]
 }
