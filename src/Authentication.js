@@ -5,7 +5,7 @@ import Box from "@material-ui/core/Box";
 
 const useStyles = makeStyles((theme) => ({
   loading: {
-    color: "white",
+    color: "#03045e",
     textAlign: "center",
     display: "flex",
     justifyContent: "center",
@@ -30,7 +30,7 @@ export const AuthProvider = ({ children }) => {
     });
   }, []);
   if (pending) {
-    return <Box className={classes.loading}>Please wait...</Box>;
+    return <Box className={classes.loading}>Just a moment...</Box>;
   }
   return (
     <AuthContext.Provider
