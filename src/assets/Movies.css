@@ -1,28 +1,26 @@
-.page-header {
-    margin-bottom: 50px;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 5px;
-}
-
-.fa-mug-hot {
-    margin-left: 15px;
-}
-
 .movie-wrap {
-    display: flex;
+  display: flex;
 }
 
-@media only screen and (max-width: 650px)  {
-    .movie-wrap {
-        display: flex;
-        flex-direction: column;
-    }
+@media only screen and (max-width: 650px) {
+  .movie-wrap {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .edit-table {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.btn-block {
+  background-color: #03045e;
+  color: #ffffff;
+}
+
+.btn-block:hover {
+  background-color: #03045e;
+  color: #ffffff;
+}

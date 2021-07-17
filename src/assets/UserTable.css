@@ -1,51 +1,51 @@
-.table-row  {
-    background-color: #ffffff;
+.table-row {
+  background-color: #ffffff;
 }
 
 .movie-card {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    background-color: #ffffff;
-    margin: 20px;
-    border-radius: 5px;
-    width: 300px;
-    transition: transform .2s;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #03045e;
+  color: #ffffff;
+  margin: 20px;
+  border-radius: 5px;
+  width: 300px;
+  transition: transform 0.2s;
 }
 
 .movie-card:hover {
-    transform: scale(1.1); 
-    -ms-transform: scale(1.1); /* IE 9 */
-    -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1);
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
 }
 
 .card-wrap {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 50px;
 }
 
 .card-name {
-    font-weight: 600;
-    font-size: 22px;
+  font-weight: 600;
+  font-size: 22px;
 }
 
 .card-date {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .card-review {
-    font-style: italic;
+  font-style: italic;
 }
 
 .no-movie-card {
-    display: flex;
-    padding: 20px;
-    background-color: #ffffff;
-    margin: 20px;
-    border-radius: 5px;
-    width: 300px;
-    justify-content: center;
+  display: flex;
+  padding: 20px;
+  background-color: #ffffff;
+  margin: 20px;
+  border-radius: 5px;
+  width: 300px;
+  justify-content: center;
 }
-
