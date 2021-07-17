@@ -11,7 +11,7 @@ import { AuthProvider } from "./Authentication";
 function App() {
   return (
     <AuthProvider>
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <PrivateRoute exact path="/Movie-Diary" component={Movies} />
         <Route exact path="/Movie-Diary/login" component={Login} />
         <Route exact path="/Movie-Diary/signup" component={SignUp} />
