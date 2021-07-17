@@ -11,12 +11,10 @@ import { AuthProvider } from "./Authentication";
 function App() {
   return (
     <AuthProvider>
-      <Router>
-        <div className="movieWrapper">
-          <PrivateRoute exact path="/Movie-Diary" component={Movies} />
-          <Route exact path="/Movie-Diary/login" component={Login} />
-          <Route exact path="/Movie-Diary/signup" component={SignUp} />
-        </div>
+      <Router basename={process.env.PUBLIC_URL}>
+        <PrivateRoute exact path="/Movie-Diary" component={Movies} />
+        <Route exact path="/Movie-Diary/login" component={Login} />
+        <Route exact path="/Movie-Diary/signup" component={SignUp} />
       </Router>
     </AuthProvider>
   );
