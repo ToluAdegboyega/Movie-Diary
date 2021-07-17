@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Movie-Diary/static/css/main.fb7c86d7.chunk.css",
-    "main.js": "/Movie-Diary/static/js/main.6671df21.chunk.js",
-    "main.js.map": "/Movie-Diary/static/js/main.6671df21.chunk.js.map",
+    "main.js": "/Movie-Diary/static/js/main.fdf90197.chunk.js",
+    "main.js.map": "/Movie-Diary/static/js/main.fdf90197.chunk.js.map",
     "runtime-main.js": "/Movie-Diary/static/js/runtime-main.1c91d384.js",
     "runtime-main.js.map": "/Movie-Diary/static/js/runtime-main.1c91d384.js.map",
     "static/js/2.9ecadb38.chunk.js": "/Movie-Diary/static/js/2.9ecadb38.chunk.js",
@@ -16,6 +16,6 @@
     "static/js/runtime-main.1c91d384.js",
     "static/js/2.9ecadb38.chunk.js",
     "static/css/main.fb7c86d7.chunk.css",
-    "static/js/main.6671df21.chunk.js"
+    "static/js/main.fdf90197.chunk.js"
   ]
 }
